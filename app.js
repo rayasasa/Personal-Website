@@ -9,9 +9,10 @@ var stupid = require('./routes/stupid');
 var users = require('./routes/users');
 
 var app = express();
+app.listen(3000);
 
 app.get('/', function(req,res){
- res.sendfile(__dirname + '/public/index.html');
+ res.sendFile(__dirname + '/public/index.html');
 });
 
 
