@@ -7,9 +7,13 @@ var bodyParser = require('body-parser');
 
 var stupid = require('./routes/stupid');
 var users = require('./routes/users');
-var index = require('./public/index.html')
 
 var app = express();
+
+app.get('/', function(req,res){
+ res.sendfile(__dirname + '/public/index.html');
+});
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+
 app.use('/users', users);
 app.use('/stupid', stupid);
 
