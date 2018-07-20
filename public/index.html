@@ -7,6 +7,8 @@
         <link rel = "stylesheet" href="./stylesheets/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+        <script src = "skill.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" type = "image/png" href="./images/title.png" />
         <title> 
@@ -18,7 +20,7 @@
                 <div class="w3-bar w3-white">
                     <span>Sushma Rayasam</span>
                     <div class = "tabs">
-                        <a href="https://www.linkedin.com/in/sushma-rayasam-15571966/" class="fa fa-linkedin"></a>
+                        <button class="w3-bar-item w3-button btn" style = "float:right"><a href="https://www.linkedin.com/in/sushma-rayasam-15571966/" > in </a></button>
                         <button class="w3-bar-item w3-button btn" style = "float:right"><a href="mailto:sushma.rayasam@yahoo.com">Contact Me</a></button>
                         <button class="w3-bar-item w3-button btn" style = "float:right"><a href = "https://1drv.ms/b/s!AiRNEuPBUam2gcFQLZIS1QQK1-mcsA" target = "_blank">Resume</a></button>
                         <button class="w3-bar-item w3-button btn" style = "float:right"><a href = "#about">About</a></button>   
@@ -31,14 +33,15 @@
                 <div class = "about-content">  
                     <img src="./images/workspace.jpg"/>
                     <p>
-                        Hi I am Sushma Rayasam. I am currently working at Siemens PLM as a software engineer. 
-                        I graduated from University of Cincinnati with a Masters in Computer Science and a thesis in Requirements Engineering.
+                        Hi I am Sushma Rayasam. I am currently working at Siemens PLM as a software engineer with a focus on developing Internal Web Solutions to increase the efficiency of developers and help Executives understand the status of our various release. Other than that I also work on maintaining our current devops tools which include jenkins, gitlab and docker.
+                        I graduated from University of Cincinnati with a Masters in Computer Science and a thesis in Requirements Engineering. 
                     </p>
                 </div>    
-            </div>         
+            </div> 
             <!--<div id="resume" class = "resume">
                 <img  src = "./images/resume.png"/>
             </div> -->        
-        </div>                       
+        </div> 
+        <svg id="fillgauge1" width="97%" height="250" onclick="gauge1.update(NewValue());"></svg>                    
     </body>
 </html>
