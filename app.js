@@ -15,6 +15,9 @@ app.get('/', function(req,res){
  res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/public/page2');
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
